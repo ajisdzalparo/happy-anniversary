@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 body {
   margin: 0;
   padding: 0;
@@ -9,6 +10,16 @@ body {
   font-family: Arial, sans-serif;
   background-image: url("https://www.gambaranimasi.org/data/media/373/animasi-bergerak-hati-0886.gif");
   background-size: cover;
+  animation: backgroundFade 10s infinite alternate;
+}
+
+@keyframes backgroundFade {
+  from {
+    background-color: #f7d9d9;
+  }
+  to {
+    background-color: #ffe4e1;
+  }
 }
 
 .container {
@@ -18,22 +29,70 @@ body {
 .card {
   background: rgba(255, 255, 255, 0.7);
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   max-width: 500px;
+  animation: cardFadeIn 2s ease-in-out;
+}
+
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .photo {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 15px;
+  animation: photoZoom 10s infinite alternate;
+}
+
+@keyframes photoZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
 }
 
 h1 {
   color: #ff6f61;
+  font-family: "Pacifico", cursive;
+  font-size: 2.5em;
+  animation: textPop 2s ease-in-out;
+}
+
+@keyframes textPop {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 p {
   color: #333;
+  font-size: 1.1em;
+  animation: fadeInText 3s ease-in-out;
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 button {
@@ -44,11 +103,12 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 button:hover {
   background-color: #ff4f41;
+  transform: scale(1.05);
 }
 
 .hidden {
@@ -58,4 +118,17 @@ button:hover {
 #surpriseMessage {
   margin-top: 20px;
   color: #ff6f61;
+  font-size: 1.2em;
+  animation: surpriseFadeIn 2s ease-in-out;
+}
+
+@keyframes surpriseFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
