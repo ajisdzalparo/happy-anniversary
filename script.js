@@ -1,15 +1,6 @@
 document.getElementById("surpriseButton").addEventListener("click", function () {
   const surpriseMessage = document.getElementById("surpriseMessage");
-  const backgroundMusic = document.getElementById("backgroundMusic");
-
   surpriseMessage.classList.toggle("hidden");
-
-  // Play the music if it is not already playing
-  if (backgroundMusic.paused) {
-    backgroundMusic.play();
-  } else {
-    backgroundMusic.pause();
-  }
 });
 
 window.onload = function () {
@@ -19,4 +10,15 @@ window.onload = function () {
     // Autoplay was prevented, show a message to the user
     console.log("Autoplay was prevented, click to play music");
   });
+
+  // Add an event listener to play the music on first user interaction if autoplay was prevented
+  document.body.addEventListener(
+    "click",
+    function () {
+      if (backgroundMusic.paused) {
+        backgroundMusic.play();
+      }
+    },
+    { once: true }
+  );
 };
