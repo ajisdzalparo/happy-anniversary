@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f7d9d9;
+  font-family: Arial, sans-serif;
+  background-image: url("https://www.gambaranimasi.org/data/media/373/animasi-bergerak-hati-0886.gif");
+  background-size: cover;
+}
+
+.container {
+  text-align: center;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+}
+
+.photo {
+  width: 100%;
+  border-radius: 10px;
+}
+
+h1 {
+  color: #ff6f61;
+}
+
+p {
+  color: #333;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff4f41;
+}
+
+.hidden {
+  display: none;
+}
+
+#surpriseMessage {
+  margin-top: 20px;
+  color: #ff6f61;
+}
